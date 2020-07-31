@@ -7,6 +7,8 @@
 -behaviour(supervisor).
 -export([start/2, stop/1, init/1, metainfo/0, allocate/2, key/4, test/0, block/1 ]).
 
+% https://zakon.rada.gov.ua/laws/show/z1586-14#Text
+
 stop(_)        -> ok.
 m()            -> [7,3,1,7,3,1,7,3,1,7,3,1].
 metainfo()     ->  #schema { name = unzr, tables = tables() }.
