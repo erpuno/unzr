@@ -1,0 +1,9 @@
+{application, unzr,
+ [
+  {description, "UNZR Identifier"},
+  {vsn, "0.7.0"},
+  {registered, []},
+  {applications, [kernel,stdlib,kvs]},
+  {mod, { unzr, []}},
+  {env, []}
+ ]}.
