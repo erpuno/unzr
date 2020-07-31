@@ -15,8 +15,6 @@ init([])       -> {ok, { {one_for_one, 5, 10}, []} }.
 start(_,_)     -> kvs:join(), supervisor:start_link({local, ?MODULE}, ?MODULE, []).
 name(Y,M,D)    -> pad(Y,4) ++ pad(M,2) ++ pad(D,2).
 check(Y,M,D,C) -> lists:sum(name(Y,M,D) ++ pad(C,4)) rem 10.
-year()         -> [ {1,31}, {2,29}, {3,31}, {4,30},  {5,31},  {6,30},
-                    {7,31}, {8,31}, {9,30}, {10,31}, {11,30}, {12,31} ].
 
 allocate({Y,M,D},Sex) ->
   Name = name(Y,M,D) ++ [48+Sex],
