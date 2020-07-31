@@ -17,7 +17,7 @@ defmodule UNZR.Mixfile do
 
   def package do
     [
-      files: ~w(include lib priv src mix.exs rebar.config),
+      files: ~w(include src mix.exs),
       licenses: ["ISC"],
       maintainers: ["Namdak Tonpa"],
       name: :unzr,
